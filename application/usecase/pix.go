@@ -28,7 +28,7 @@ func (pixUseCase *PixUseCase) RegisterKey(kind string, accountID string, key str
 	return pixKey, nil
 }
 
-func (pixUseCase *PixUseCase) FindKeyByKind(key string, kind string) (*model.PixKey, error) {
+func (pixUseCase *PixUseCase) FindKey(key string, kind string) (*model.PixKey, error) {
 	pixKey, err := pixUseCase.PixKeyRepository.FindKeyByKind(key, kind)
 
 	if err != nil {
